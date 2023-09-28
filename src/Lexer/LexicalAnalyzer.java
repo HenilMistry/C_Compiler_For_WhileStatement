@@ -5,24 +5,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-enum TokenType {
-    WHILE, LEFT_PAREN, RIGHT_PAREN, LEFT_BRACE, RIGHT_BRACE,
-    IDENTIFIER, INTEGER_LITERAL, SEMICOLON, EQUALS, PLUS, MINUS,
-    TIMES, DIVIDE, LESS_THAN, GREATER_THAN, AND, OR, NOT, EOF
-}
-
-class Token {
-    TokenType type;
-    String lexeme;
-    int line;
-
-    public Token(TokenType type, String lexeme, int line) {
-        this.type = type;
-        this.lexeme = lexeme;
-        this.line = line;
-    }
-}
-
 public class LexicalAnalyzer {
     private String input;
     private int position;
