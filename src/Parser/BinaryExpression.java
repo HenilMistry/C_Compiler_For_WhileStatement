@@ -2,9 +2,9 @@ package Parser;
 
 import Lexer.TokenType;
 public class BinaryExpression extends Expression {
-    Expression left;
+    public Expression left;
     TokenType operator;
-    Expression right;
+    public Expression right;
 
     public BinaryExpression(Expression left, TokenType operator, Expression right) {
         this.left = left;
